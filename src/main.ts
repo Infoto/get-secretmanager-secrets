@@ -71,7 +71,7 @@ async function run(): Promise<void> {
 
       // Split multiline secrets by line break and mask each line.
       // Read more here: https://github.com/actions/runner/issues/161
-      value.split(/\r\n|\r|\n/g).forEach((line) => setSecret(line));
+      // value.split(/\r\n|\r|\n/g).forEach((line) => setSecret(line));
 
       setOutput(ref.output, value);
     }
